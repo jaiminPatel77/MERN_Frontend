@@ -1,0 +1,84 @@
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #024a70; 
+  transition: background 0.3s ease;
+}
+
+.nav-links li {
+  margin: 1rem;
+}
+
+.nav-links a {
+  border: 1px solid transparent;
+  color: #f0f0f0; 
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a.active {
+  background: #4a4a4a; 
+  border-color: #51004b;
+  color: #e0e0e0; 
+  transform: translateY(-2px);
+}
+
+.nav-links button {
+  cursor: pointer;
+  border: 1px solid #f0f0f0; 
+  color: #f0f0f0;
+  background: transparent;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font: inherit;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links button:focus {
+  outline: none;
+}
+
+.nav-links button:hover,
+.nav-links button:active {
+  background: #6c757d; /* Medium grey background for hover/active */
+  color: #f0f0f0; /* Light grey text for contrast */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    flex-direction: row;
+    background: transparent; /* Transparent background for larger screens */
+  }
+
+  .nav-links li {
+    margin: 0 1rem; /* Adequate spacing for horizontal layout */
+  }
+
+  .nav-links a {
+    color: #f0f0f0; /* Light grey text on larger screens */
+  }
+
+  .nav-links button {
+    border: 1px solid #f0f0f0;
+    color: #f0f0f0;
+    background: transparent;
+  }
+  
+  .nav-links button:hover,
+  .nav-links button:active {
+    background: #007bff; /* Vibrant blue for button hover/active */
+    color: #ffffff; /* White text for better contrast */
+  }
+}

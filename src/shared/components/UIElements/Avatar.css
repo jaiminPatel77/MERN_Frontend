@@ -1,0 +1,28 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Default width, adjust as needed */
+  height: 100%; /* Default height, adjust as needed */
+  border-radius: 50%; /* Fully rounded */
+  overflow: hidden; /* Ensure content is clipped to rounded shape */
+  background: linear-gradient(135deg, #a2c2e2, #e2a2a2); /* Subtle gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.avatar img {
+  width: 100%; /* Fill container */
+  height: 100%; /* Fill container */
+  object-fit: cover; /* Ensure image covers the container */
+  transition: opacity 0.3s ease; /* Smooth fade effect */
+}
+
+.avatar:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.avatar:hover img {
+  opacity: 0.9; /* Slight fade effect on hover */
+}

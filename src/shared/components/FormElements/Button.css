@@ -1,0 +1,100 @@
+.button {
+  font: inherit;
+  padding: 0.6rem 1.8rem;
+  border: none; /* Removed border for a cleaner look */
+  border-radius: 8px; /* Slightly smoother corners */
+  background: linear-gradient(145deg, #4a90e2, #007bff); /* Modern blue gradient */
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Enhanced transitions */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Stronger shadow for a floating effect */
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.4); /* Refined focus ring */
+}
+
+.button:hover,
+.button:active {
+  background: linear-gradient(145deg, #007bff, #4a90e2); /* Gradient reverse on hover */
+  transform: translateY(-2px); /* Slight upward movement on hover */
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4); /* Enhanced shadow on hover */
+}
+
+.button--inverse {
+  background: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button--inverse:hover,
+.button--inverse:active {
+  color: white;
+  background: linear-gradient(145deg, #007bff, #4a90e2); /* Matching gradient for inverse */
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4); /* Shadow for inverse hover */
+}
+
+.button--danger {
+  background: linear-gradient(145deg, #e14a4a, #ff6f61); /* Advanced coral gradient for danger */
+  border: none;
+}
+
+.button--danger:hover,
+.button--danger:active {
+  background: linear-gradient(145deg, #ff6f61, #e14a4a); /* Gradient reverse on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(225, 74, 74, 0.4); /* Shadow for danger hover */
+}
+
+.button:disabled,
+.button:hover:disabled,
+.button:active:disabled {
+  background: #ccc;
+  color: #979797;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none; /* No transform on disabled */
+}
+
+.button--small {
+  font-size: 0.8rem;
+  padding: 0.4rem 1rem;
+}
+
+.button--big {
+  font-size: 1.5rem;
+  padding: 0.8rem 2rem;
+}
+
+.button--rounded {
+  border-radius: 50px;
+}
+
+.button--icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button--icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+.button--gradient {
+  background: linear-gradient(90deg, #ff8c00, #ffa500, #ffb700); /* Vibrant gradient */
+  border: none;
+}
+
+.button--gradient:hover,
+.button--gradient:active {
+  background: linear-gradient(90deg, #ffa500, #ffb700, #ff8c00); /* Gradient reverse on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 140, 0, 0.4); /* Shadow for gradient hover */
+}

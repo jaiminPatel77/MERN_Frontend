@@ -1,0 +1,110 @@
+.form-control {
+  margin: 1.5rem 0;
+}
+
+
+.password-toggle-icon {
+  position: absolute;
+  right: 1.25rem; 
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust to ensure consistent vertical centering */
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.password-toggle-icon:hover {
+  color: #6200ea; /* Same purple as the focus effect */
+}
+
+input {
+  padding-right: 40px; /* Ensure there's enough space for the icon */
+}
+
+
+.form-control label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+  letter-spacing: 0.5px; /* Slight letter spacing for modern look */
+}
+
+.form-control input,
+.form-control textarea {
+  width: 100%;
+  font: inherit;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  padding: 0.75rem 1rem;
+  border-radius: 6px; /* Smoother corners */
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+  font-size: 0.95rem; /* Adjusted font size for better readability */
+  color: #555; /* Softer text color */
+}
+
+.form-control input::placeholder,
+.form-control textarea::placeholder {
+  color: #999; /* Lighter color for placeholders */
+  font-style: italic; /* Italicized placeholder text */
+  opacity: 0.8; /* Slight transparency for placeholders */
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: #6200ea; /* Updated to a trendy purple */
+  box-shadow: 0 0 8px rgba(98, 0, 234, 0.2); /* Enhanced shadow for focus */
+}
+
+.form-control--invalid label,
+.form-control--invalid p {
+  color: #d32f2f; /* More modern red tone */
+}
+
+.form-control--invalid input,
+.form-control--invalid textarea {
+  border-color: #d32f2f;
+  background: #ffe3e3; /* Softer red background */
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.2); /* Updated shadow for invalid state */
+}
+
+.form-control textarea {
+  resize: vertical;
+  min-height: 150px;
+  line-height: 1.5; /* Improved line height for better readability */
+}
+
+.form-control input:focus-visible,
+.form-control textarea:focus-visible {
+  outline: 2px solid #6200ea; /* Improved focus outline */
+  outline-offset: 2px; /* Offset for better visibility */
+}
+
+/* Floating label for a modern touch */
+.form-control {
+  position: relative;
+}
+
+.form-control label {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  background-color: #fff;
+  padding: 0 0.25rem;
+  transform: translateY(50%);
+  transition: all 0.3s ease;
+  pointer-events: none; /* Prevents clicking on the label */
+}
+
+.form-control input:focus + label,
+.form-control input:not(:placeholder-shown) + label,
+.form-control textarea:focus + label,
+.form-control textarea:not(:placeholder-shown) + label {
+  top: -1.5rem;
+  font-size: 0.85rem;
+  color: #6200ea;
+}
